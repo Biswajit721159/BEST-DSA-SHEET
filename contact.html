@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <style>
+      body {
+        background-color: #d1e7dd;
+      }
+      .container {
+        background-color:#d1e7dd;
+        border-radius: 20px;
+        margin-top: 50px;
+      }
+      a{
+        text-decoration: none;
+      }
+    </style>
+    <script></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Contact Me:</h1>
+      <div class="input-group mb-3">
+        <span class="input-group-text">First and last name</span>
+        <input
+          type="text"
+          aria-label="First name"
+          placeholder="Enter first Name"
+          class="form-control"
+          id="first"
+        />
+        <input
+          type="text"
+          aria-label="Last name"
+          placeholder="Enter last Name"
+          class="form-control"
+          id="second"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"
+          >Email address</label
+        >
+        <input
+          type="email"
+          class="form-control"
+          id="third"
+          placeholder="name@example.com"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label"
+          >Writing Here</label
+        >
+        <textarea
+          class="form-control"
+          id="fourth"
+          rows="3"
+          id="fourth"
+        ></textarea>
+      </div>
+      <button type="button" onclick="myfun()" class="btn btn-primary">
+        Send Message
+      </button>
+
+      
+
+      <div class="brocklasner">
+
+        <h1>Contact Me</h1>
+      
+        <div class="brocklasner">
+  
+         
+          <h6>Name : Biswajit Ghosh</h6>
+          <h6>Email :   bg2329@ece.jgec.ac.in</h6>
+          <h6>Address : West Bengal,India</h6>
+          <img src="Leetcode.png" alt="Girl in a jacket" width="40" height="40">Linkedin  Profile : <a href="https://www.linkedin.com/in/biswajit-ghosh-21a415209" target="_blank">  Click </a>
+          <div class="container1">
+            <img src="Linkedin.png" alt="Girl in a jacket" width="40" height="40"> 
+            Leetcode  Profile :<a href="https://leetcode.com/biswajit2329/" target="_blank"> Click </a> 
+          </div>
+  
+        </div>
+        
+  
+
+      </div>
+      
+
+    </div>
+        
+    <script>
+      function myfun() {
+      
+        var first = document.getElementById('first').value;
+        var second = document.getElementById('second').value;
+        var third=   document.getElementById('third').value;
+        var fourth=document.getElementById('fourth').value;
+        let count=0;
+
+        //its all about first name 
+
+        let len_first=first.length;
+        if(len_first==0)
+        {
+          swal(" you first Name "+len_first+" charcter which is not possiable !");
+        }
+        else{
+        for(let i=0;i<len_first;i++)
+        {
+          if(first[i]=='0' ||first[i]=='1' || first[i]=='2'||first[i]=='3'||first[i]=='4' ||first[i]=='5'||first[i]=='6'||first[i]=='7'||first[i]=='8'||first[i]=='9')
+          {
+            swal("you can`t use  "+first[i]+" ");
+            break;
+          }
+          else
+          {
+            count++;
+          }
+        }
+        if(count==len_first)
+        {
+
+          //all about last Name
+          count=0;
+          let len_second=second.length;
+          if(len_second==0)
+          {
+            swal(" you Last Name "+len_second+" charcter which is not possiable !");
+          }
+          else{
+          for(let i=0;i<len_second;i++)
+          {
+            if(second[i]=='0' ||second[i]=='1' || second[i]=='2'||second[i]=='3'||second[i]=='4' ||second[i]=='5'||second[i]=='6'||second[i]=='7'||second[i]=='8'||second[i]=='9')
+            {
+              swal("you can`t use  "+second[i]+" ");
+              break;
+            }
+            else
+            {
+              count++;
+            }
+          }
+          
+          if(count==len_second)
+          {
+
+            //all about email
+             count=0;
+             let len_third=third.length;
+             if(third[0]=='@')
+             {
+              swal("Invalid Email address ");
+             }
+             else
+             {
+               for(let i=0;i<len_third;i++)
+               {
+                 if(third[i]=='@')
+                 {
+                   let x=len_third-i;
+                   if(x<=9)
+                   {
+                     count--;
+                    swal("Invalid Email address ");
+                   }
+                 }
+                 else
+                 {
+                   count++;
+                 }
+               }
+             }
+             if(count==len_third-1)
+             {
+
+              // its al about text area
+               let len_four=fourth.length;
+               if(len_four>=5)
+               {
+                 swal({
+                    title: "Good job!",
+                    text: "succesfull",
+                    icon: "success",
+                    button: "ok",
+                    });
+                 }
+                 else
+                 {
+                  swal("please write more than " + len_four+" charcter");
+                 }
+               }
+               else
+               {
+                swal("Invalid Email address ");
+               }
+             }
+             else
+             {
+              swal("Invalid Last Name ");
+             }
+            }
+          }
+          else
+          {
+            swal("Invalid  first Name ");
+          }
+        }
+
+        }
+      
+    </script>
+  </body>
+</html>
